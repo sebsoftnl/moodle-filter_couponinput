@@ -83,7 +83,7 @@ function filter_couponinput_impl($template) {
             'urlinputcoupon' => $urlinputcoupon->out(false),
             'btnclass' => $btnclass,
             'instanceid' => 0,
-            'sesskey' => sesskey()
+            'sesskey' => sesskey(),
         ];
         return $renderer->render_from_template('block_coupon/coupon/inputform', $templatecontext);
     }
