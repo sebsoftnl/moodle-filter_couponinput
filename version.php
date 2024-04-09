@@ -30,7 +30,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'filter_couponinput';
-$plugin->release = '1.0.1 (build 2024020100)';
+$plugin->release = '1.0.2 (build 202404090000)';
 $plugin->version = 2024020100;
 $plugin->requires = 2022041900;
 $plugin->maturity = MATURITY_ALPHA;
