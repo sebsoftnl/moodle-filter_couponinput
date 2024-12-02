@@ -20,15 +20,8 @@
  * File         filter.php
  * Encoding     UTF-8
  *
- * @package     filter_couponinput
- *
- * @copyright   RvD
- * @author      RvD <helpdesk@sebsoft.nl>
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
-/**
- * Filter implementation
+ * @todo MDL-82708 delete this file as part of Moodle 6.0 development.
+ * @deprecated This file is no longer required in Moodle 4.5+.
  *
  * @package     filter_couponinput
  *
@@ -36,56 +29,7 @@
  * @author      RvD <helpdesk@sebsoft.nl>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class filter_couponinput extends moodle_text_filter {
 
-    /**
-     * Apply filter
-     *
-     * @param string $text
-     * @param array $options
-     * @return string
-     */
-    public function filter($text, array $options = []) {
-        if (empty($text) || is_numeric($text)) {
-            return $text;
-        }
+defined('MOODLE_INTERNAL') || die();
 
-        $search = '/([\[<])couponinputform[\]>]/is';
-        $result = preg_replace_callback($search, 'filter_couponinput_impl', $text);
-
-        if (is_null($result)) {
-            return $text; // Error during regex processing (too many nested spans?).
-        } else {
-            return $result;
-        }
-    }
-
-}
-
-/**
- * Callback implementation.
- *
- * @param string $template
- * @return string
- */
-function filter_couponinput_impl($template) {
-    global $PAGE, $CFG;
-    $cfgbuttonclass = get_config('block_coupon', 'buttonclass');
-    $btnclass = 'btn-coupon';
-    if ($cfgbuttonclass != 'none') {
-        $btnclass .= ' ' . $cfgbuttonclass;
-    }
-    $baseparams = [];
-    if (has_capability('block/coupon:inputcoupons', $PAGE->context)) {
-        $renderer = $PAGE->get_renderer('block_coupon');
-        $urlinputcoupon = new moodle_url($CFG->wwwroot . '/blocks/coupon/view/input_coupon.php', $baseparams);
-        $templatecontext = (object)[
-            'urlinputcoupon' => $urlinputcoupon->out(false),
-            'btnclass' => $btnclass,
-            'instanceid' => 0,
-            'sesskey' => sesskey(),
-        ];
-        return $renderer->render_from_template('block_coupon/coupon/inputform', $templatecontext);
-    }
-    return '';
-}
+debugging('This file is no longer required in Moodle 4.5+. Please do not include/require it.', DEBUG_DEVELOPER);

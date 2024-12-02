@@ -15,25 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin version and other meta-data are defined here.
+ * Renamed classes for the filter_activitynames plugin.
  *
- * File         version.php
- * Encoding     UTF-8
- *
- * @package     filter_couponinput
- *
- * @copyright   RvD
- * @author      RvD <helpdesk@sebsoft.nl>
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   filter_activitynames
+ * @copyright RvD <helpdesk@sebsoft.nl>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die;
 
-$plugin->component = 'filter_couponinput';
-$plugin->release = '1.0.2 (build 202404090000)';
-$plugin->version = 2024040900;
-$plugin->requires = 2024100700; // YYYYMMDDHH (This is the release version for Moodle 4.0).
-$plugin->maturity = MATURITY_ALPHA;
-$plugin->dependencies = [
-    'block_coupon' => 2024010200,
+$renamedclasses = [
+    'filter_couponinput' => \filter_couponinput\text_filter::class,
 ];
