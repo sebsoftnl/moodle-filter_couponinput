@@ -34,6 +34,7 @@ $plugin->release = '1.0.2 (build 202404090000)';
 $plugin->version = 2024040900;
 $plugin->requires = 2024100700; // YYYYMMDDHH (This is the release version for Moodle 4.0).
 $plugin->maturity = MATURITY_ALPHA;
+$plugin->incompatible = 405;
 $plugin->dependencies = [
     'block_coupon' => 2024010200,
 ];
