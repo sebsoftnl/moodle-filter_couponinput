@@ -30,11 +30,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'filter_couponinput';
-$plugin->release = '1.0.2 (build 202404090000)';
-$plugin->version = 2024040900;
-$plugin->requires = 2024100700; // YYYYMMDDHH (This is the release version for Moodle 4.0).
+$plugin->version = 2025120100;
+$plugin->release = '1.0.3 (build 2025120100)';
+$plugin->requires = 2024100700; // Moodle 4.5+.
 $plugin->maturity = MATURITY_ALPHA;
-$plugin->incompatible = 405;
 $plugin->dependencies = [
     'block_coupon' => 2024010200,
 ];
+$plugin->supported = [405];

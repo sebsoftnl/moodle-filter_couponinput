@@ -15,22 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * File only retained to prevent fatal errors in code that tries to require/include this.
+ * Renamed classes for the filter_couponinput plugin.
  *
- * File         filter.php
- * Encoding     UTF-8
- *
- * @todo        MDL-82708 delete this file as part of Moodle 6.0 development.
- * @deprecated  This file is no longer required in Moodle 4.5+.
- *
- * @package     filter_couponinput
- *
- * @copyright   RvD
- * @author      RvD <helpdesk@sebsoft.nl>
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   filter_couponinput
+ * @copyright RvD <helpdesk@sebsoft.nl>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-defined('MOODLE_INTERNAL') || die();
 
-debugging('This file is no longer required in Moodle 4.5+. Please do not include/require it.', DEBUG_DEVELOPER);
+defined('MOODLE_INTERNAL') || die;
 
-class_alias('filter_couponinput', \filter_couponinput\text_filter::class);
+$renamedclasses = [
+    'filter_couponinput' => \filter_couponinput\text_filter::class,
+];
