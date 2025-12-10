@@ -27,8 +27,6 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Filter implementation
  *
@@ -38,7 +36,7 @@ defined('MOODLE_INTERNAL') || die();
  * @author      RvD <helpdesk@sebsoft.nl>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class text_filter extends moodle_text_filter {
+class filter_couponinput extends moodle_text_filter {
     /**
      * Apply filter
      *
