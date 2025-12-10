@@ -29,5 +29,5 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Coupon form text filter';
 $string['filtername'] = 'Coupon form text filter';
+$string['pluginname'] = 'Coupon form text filter';
