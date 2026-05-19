@@ -77,7 +77,7 @@ class text_filter extends \core_filters\text_filter {
         $baseparams = [];
         if (has_capability('block/coupon:inputcoupons', $PAGE->context)) {
             $renderer = $PAGE->get_renderer('block_coupon');
-            $urlinputcoupon = new moodle_url($CFG->wwwroot . '/blocks/coupon/view/input_coupon.php', $baseparams);
+            $urlinputcoupon = new \moodle_url($CFG->wwwroot . '/blocks/coupon/view/input_coupon.php', $baseparams);
             $templatecontext = (object)[
                 'urlinputcoupon' => $urlinputcoupon->out(false),
                 'btnclass' => $btnclass,

@@ -30,8 +30,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'filter_couponinput';
-$plugin->version = 2025120101;
-$plugin->release = '1.0.3.1 (build 2025120101)';
+$plugin->version = 2026051900;
+$plugin->release = '1.0.3.2 (build 2026051900)';
 $plugin->requires = 2024100700; // Moodle 4.5+.
 $plugin->maturity = MATURITY_ALPHA;
 $plugin->dependencies = [
